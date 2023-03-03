@@ -1,4 +1,4 @@
-string_var = """E	1	1999-02-28	b,g,f	jjj:12,bbb:3,ddd:9,ggg:8,hhh:2
+E	1	1999-02-28	b,g,f	jjj:12,bbb:3,ddd:9,ggg:8,hhh:2
 A	2	1999-10-28	a,f,c	ccc:2,ddd:0,aaa:3,hhh:9
 B	5	1998-05-02	f,e,a,c	ddd:2,ggg:5,ccc:6,jjj:12
 A	3	1999-08-28	a,b	hhh:9,iii:5,eee:7,bbb:1
@@ -38,31 +38,3 @@ B	8	1997-05-21	c,a	ddd:5,jjj:17,iii:7,ccc:10,bbb:4
 C	9	1997-07-22	c,a,e,f	eee:3,fff:2,hhh:6
 E	1	1999-09-28	e,d	fff:9,iii:2,eee:5
 E	5	1998-01-26	f,a,d	hhh:8,ggg:3,jjj:5"""
-
-string_vector = string_var.splitlines()
-vectorLetras = ["A", "B", "C", "D", "E"]
-vectorTuplas = [0,0,0,0,0]
-cont = -1
-
-for letra in vectorLetras:
-    cont += 1
-    acumValoresDic = 0
-    for elemento in string_vector:
-        string_elementosxlinea = elemento.split("\t")
-        letraCol1 = string_elementosxlinea[0]
-
-        if letra == letraCol1:
-            diccionario = string_elementosxlinea[4].split(",")
-            
-            for elementoDic in diccionario:
-                acumValoresDic += int(elementoDic.split(":")[1])
-                
-    vectorTuplas[cont] = acumValoresDic
-
-diccionario_sumaValoresCol5xletraCol1 = {vectorLetras:vectorTuplas for (vectorLetras,vectorTuplas) in zip(vectorLetras,vectorTuplas)}
-print(diccionario_sumaValoresCol5xletraCol1)
-                
-
-
-
-
