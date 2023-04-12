@@ -60,12 +60,6 @@ def pregunta_01():
     214
 
     """
-    # Leer un archivo externo
-    #data = open("data.csv", "r").readlines() 
-
-    # Reemplazar el salto de línea
-    # list comprenhention
-    #data = [linea.replace("\n", " ")for linea in data]
     
     string_vector = string_var.splitlines()
     int_acumulador = 0
@@ -104,8 +98,6 @@ def pregunta_02():
 
         tupla = (letra, contLetras)
         listaTuplas.append(tupla)
-
-    #print(listaTuplas)
         
     return listaTuplas
 
@@ -139,7 +131,6 @@ def pregunta_03():
         tupla = (letra, acumLetra)
         listaTuplas.append(tupla)
 
-    #print(listaTuplas)
     return listaTuplas
 
 
@@ -182,9 +173,6 @@ def pregunta_04():
 
         tupla = ((mes), acumMeses)
         listaTuplas.append(tupla)
-            
-
-    #print(listaTuplas)
 
     return listaTuplas
 
@@ -220,8 +208,6 @@ def pregunta_05():
 
                 tupla = (elemento[0], int(vector[0]), int(vector[1]))
         listaTuplas.append(tupla)
-
-    #print(listaTuplas)
     
     return listaTuplas
 
@@ -272,7 +258,6 @@ def pregunta_06():
             
         listaTuplas.append(tupla)
             
-    #print(listaTuplas)
     return listaTuplas
 
 
@@ -313,7 +298,7 @@ def pregunta_07():
                 tupla = (i, list(string_letrasxNumero))
             
         listaTuplas.append(tupla)
-    #print(listaTuplas) 
+
     return listaTuplas
 
 
@@ -357,8 +342,7 @@ def pregunta_08():
                 tupla = (i, sorted(string_letrasxNumero))
 
         listaTuplas.append(tupla)
-            
-    #print(listaTuplas)  
+             
     return listaTuplas
 
 
@@ -403,7 +387,7 @@ def pregunta_09():
                     vectorTuplas[cont] = contClaves
 
     diccionarioClaves = {vectorClaves:vectorTuplas for (vectorClaves,vectorTuplas) in zip(vectorClaves,vectorTuplas)}        
-    #print(diccionarioClaves)
+
     return diccionarioClaves
 
 
@@ -438,7 +422,6 @@ def pregunta_10():
         tupla = (letra, cantLetras, cantClaves)
         listaTuplas.append(tupla)
 
-    #print(listaTuplas)
     return listaTuplas
 
 
@@ -480,8 +463,6 @@ def pregunta_11():
         vectorTuplas[cont] = acumNumsxletraCol4
 
     diccionario_sumaCol2xletraCol4 = {vectorClaves:vectorTuplas for (vectorClaves,vectorTuplas) in zip(vectorClaves,vectorTuplas)}
-        
-    #print(diccionario_sumaCol2xletraCol4)
 
     return diccionario_sumaCol2xletraCol4
 
